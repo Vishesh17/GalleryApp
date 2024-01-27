@@ -1,4 +1,5 @@
 import useFirestore from "../hooks/useFirestore";
+import { Link } from 'react-router-dom';
 
 const ImageGallery = () => {
   const { docs: images, isLoading } = useFirestore('images');
@@ -13,6 +14,7 @@ const ImageGallery = () => {
     <div className="grid md:grid-cols-3 justify-center gap-4 mt-10">
       {images.map(image => (
         <div key = {image.imageUrl} className="card card-compact w-96 bg-base-100 shadow-xl">
+          <Link to={`/photos/${image.imageUrl}`}></Link>
           <figure className="max-h-[15rem]">
             <img src={image.imageUrl} alt="Shoes" />
           </figure>
