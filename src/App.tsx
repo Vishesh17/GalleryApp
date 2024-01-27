@@ -10,16 +10,16 @@ function App() {
   return (
     <AuthProvider>
       <Routes> 
-      <Route path="/" element={
-        <PrivateRoute>
-          <Home />
-        </PrivateRoute>
-      } />
-      <Route path="/signup" element={
-        <PublicRoute>
-          <Signup />
-        </PublicRoute>
-      } />
+        <Route path='/' element={
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        } />
+        <Route path='/signup' element={
+          <PublicRoute>
+            <Signup />
+          </PublicRoute>
+        } />
     </Routes>
     </AuthProvider>
   );
