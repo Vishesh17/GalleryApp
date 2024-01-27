@@ -13,15 +13,15 @@ const ImageGallery = () => {
     <div className="grid md:grid-cols-3 justify-center gap-4 mt-10">
       {images.map(image => (
         <div key = {image.imageUrl} className="card card-compact w-96 bg-base-100 shadow-xl">
-        <figure className="max-h-[15rem]">
-          <img src={image.imageUrl} alt="Shoes" />
-        </figure>
-        <div className="card-body">
-          <div className="card-actions justify-end">
-            <p>Upload By: {image.userEmail}</p>
-            <span>Created On: {image.createdAt.toLocaleDateString()}</span>
+          <figure className="max-h-[15rem]">
+            <img src={image.imageUrl} alt="Shoes" />
+          </figure>
+          <div className="card-body">
+            <div className="card-actions justify-end">
+              <p>Upload By: {image.userEmail}</p>
+              <span>Created On: {image.createdAt.toLocaleDateString()}</span>
+            </div>
           </div>
-        </div>
       </div>
       ))}
     </div>

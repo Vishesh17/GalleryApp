@@ -5,3 +5,4 @@
 
 /* Import Tailwind CSS utilities styles */
 @import 'tailwindcss/utilities';
+@import 'daisyui/dist/full.css'

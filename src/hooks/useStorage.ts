@@ -47,7 +47,7 @@ const useStorage = () => {
             );
     }
     return{
-        progress, error, startUpload
+        progress, error, url, startUpload
     }
 
 }
